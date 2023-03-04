@@ -1,0 +1,212 @@
+@font-face {
+  font-family: Chalk;
+  src: url("../FontType/ChalkPaint.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Chalk, Arial, sans-serif;
+  background-image: url("../images/MathBrain_Background_SemLogo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.ranking {
+  left: 0%;
+  top: 5%;
+  background-color: #f9dc38;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+.rankingTitle {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.rankings {
+  font-size: 13px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.seuRanking {
+  color: #096dcb;
+}
+.loading {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo img {
+  max-width: 200px;
+}
+
+.game {
+  color: white;
+  padding: 20px;
+  background-color: #39654e;
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 25px;
+  max-width: 70%;
+  max-height: 35%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 15%;
+}
+
+.question {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.options {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.option {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option:hover {
+  font-size: 42px;
+  background-color: #598e55;
+}
+
+.timer {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.timer:hover {
+  font-size: 35px;
+}
+
+.erros {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.erros:hover {
+  font-size: 35px;
+}
+.score {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.popup {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffffd4;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 2%;
+  padding: 20px;
+  z-index: 1;
+  align-items: center;
+  flex-direction: column;
+}
+
+.roleta {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  animation: spin 3s linear infinite;
+  margin: 0 auto;
+}
+.cerebro {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  align-items: center;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.info {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+.logoPopup {
+  text-align: center;
+  max-width: 50%;
+  max-height: 50%;
+}
+.imgLogo {
+  max-width: 100%;
+  max-height: 30%;
+}
+#jogarNovamente {
+  margin-top: 30px;
+  width: 50%;
+  height: 20%;
+  border-radius: 2%;
+  background-color: #e7750a;
+}
+#jogarNovamente:hover {
+  background-color: #0ee40e;
+}
+.fimDeJogo {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ff9f28;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border-radius: 2%;
+  padding: 20px;
+  z-index: 1;
+  align-items: center;
+  flex-direction: column;
+}
+.mensagemAguarde {
+  font-size: 20px;
+}
+.active {
+  display: flex;
+}

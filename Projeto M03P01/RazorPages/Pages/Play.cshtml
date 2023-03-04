@@ -1,0 +1,53 @@
+﻿@page
+
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@model PlayModel
+@{
+    ViewData["Title"] = "Home page";
+}
+    <link rel="stylesheet"
+    href="./css/PlayStyle.css">
+    <div class="ranking">
+      <div class="rankingTitle">Melhores 10 pontuações</div>
+    </div>
+    <div class="container">
+      <div class="logo">
+        <img src="images/MathBrain_submarka.png" alt="MathBrain" />
+      </div>
+      <div class="game">
+        <div class="question"></div>
+        <div class="options">
+        </div>
+        <div class="timer"><span id="countdown"></span></div>
+        <div class="erros">Erros: <span id="numErros"></span></div>
+      </div>
+      <div class="popup" id="popup-jogo">
+        <div class="logoPopup">
+          <img class="imgLogo" src="images/MathBrain_submarka.png" alt="MathBrain" />
+        </div>
+
+        <div class="info" id="info-jogo">
+          <div class="infos">Sua pontuação atual: <span id="ultimoRanking"></span></div>
+        <div class="infos">Sua melhor pontuação: <span id="melhorRanking"></span></div>
+        <div class="infos">Sua maior quantidade de acertos: <span id="qtdAcertos"></span></div>
+        <div class="infos">Seu melhor Tempo de resposta: <span id="melhorTempo"></span></div>
+        <button id="jogarNovamente"> Jogar Novamente </button>
+      </div>
+    </div>
+    <div class="fimDeJogo">
+      <h2>Fim de Jogo!</h2>
+      <div class="loading">
+          <img src="images/MathBrain_roleta.png" class="roleta">
+          <img src="images/MathBrain_cérebro.png" class="cerebro">
+      </div> 
+      <div class="mensagemAguarde">Aguarde enquanto Calculamos sua pontuação</div>
+    </div>
+    
+    <script>
+      
+      const id = '@User.Claims.ToArray()[1].Value'
+    </script>
+    <script src="./js/script.js" defer></script>
