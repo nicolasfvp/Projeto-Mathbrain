@@ -12,12 +12,12 @@ Até então, o meu maior desafio neste projeto foi a integração e adequação 
 
 ### Sobre o projeto
 
-O intúito do projeto é criar um site onde sejam mostradas equações matemáticas e, o jogador,
+O intuito do projeto é criar um site onde sejam mostradas equações matemáticas e, o jogador,
 caso as responda corretamente, gera uma quantidade X de pontos que posteriormente pode entrar no ranking geral da aplicação.
 Este projeto contém um total de 5 micro-serviços, sendo 2 destes criados em TDD, e 1 database SQLServer, sendo eles:
 
 GeraNumeros: Api responsável por retornar para o Front-end as equações matemáticas e suas respectivas respostas.
-As equações são geradas de forma a serem dificultadas a cada 10 equações, aumentando os numeros aleatóriamente gerados e adicionando novos operadores matemáticos
+As equações são geradas de forma a serem dificultadas a cada 10 equações, aumentando os números aleatoriamente gerados e adicionando novos operadores matemáticos.
 
 RankingApi: Api responsável por receber do Front-end as respostas do jogador e seu respectivo tempo de resposta.
 Sua função é atualizar a tabela EmProcesso do database, para que fique claro que os dados do jogador estão começando a ser processados, assim como também iniciar a primeira Queue RabbitMq, enviando os dados do jogador para a próxima etapa.
